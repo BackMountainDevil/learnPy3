@@ -62,3 +62,7 @@ class Solution:
     [278. First Bad Version](https://leetcode.cn/problems/first-bad-version/)：取等、加一、减一；或者 不取等、加一、取中
 
     在278的官方解答也有评论在说这个事情，总之，不取等的时候边界收缩不一样
+
+3. 题目中的条件中的数列是无序的，可以使用二分吗？
+
+    如果使用排序后再二分的效率更高，可以直接对其进行排序再二分，如[两个数组间的距离值](https://leetcode.cn/problems/find-the-distance-value-between-two-arrays/solution/liang-ge-shu-zu-jian-de-ju-chi-zhi-by-leetcode-sol/)
