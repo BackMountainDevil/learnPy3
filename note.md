@@ -5,4 +5,6 @@
 
 [OI Wiki](https://github.com/OI-wiki/OI-wiki)：含算法基础、数据结构
 
+[LeetCode-Book](https://github.com/krahets/LeetCode-Book):《图解算法数据结构》、《剑指 Offer》
+
 [LeetCode Cookbook in Go](https://github.com/halfrost/LeetCode-Go)
