@@ -107,4 +107,9 @@ for x, y in edges:
     merge(x, y)
 print(f"DEBUG parent:{parent}")
 assert find(parent[5]) == find(parent[9]), "node5 and 9 should be in the same set"
+print(f"DEBUG num of sets - sum:{sum([parent[i]==i for i in range(n)])}")
+# !!! 错误的方法，不能确保 par 中的都指向的是根结点
+print(f"DEBUG Err num of sets - len:{len(set(parent))}")
+# 需要注意这里 find 会修改 parent
+print(f"DEBUG num of sets - sum:{sum([find(i)==i for i in range(n)])}")
 ```
