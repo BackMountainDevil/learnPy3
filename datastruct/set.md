@@ -4,7 +4,7 @@
 - [【算法与数据结构】—— 并查集 theSerein 2023-07-10](https://blog.csdn.net/the_zed/article/details/105126583)：两种优化方式
 - [并查集 leetcode 题目](https://leetcode.cn/tag/union-find/problemset/)
 
-并查集常用来解决连通性问题
+并查集常用来解决连通性问题，判断节点是否连通/属于同一个集合、求集合数量、每个集合包含的点数
 
 n 个元素集合划分，最多划分为 n 个集合
 
