@@ -44,6 +44,8 @@ True
 False
 ```
 
+Counter 是 dict 的子类，其对象不能用在 dict 中作为键，否则会引发 `TypeError: unhashable type: 'Counter'`，这种情况可以将字符串排序后作为键，也可以用数组统计每个字符出现的次数，然后用数组做索引，参考 [49. 字母异位词分组](https://leetcode.cn/problems/group-anagrams/solutions/520469/zi-mu-yi-wei-ci-fen-zu-by-leetcode-solut-gyoc/?envType=study-plan-v2&envId=top-interview-150)
+
 # defaultdict
 
 下面是一个计数例子，用来统计字符串中每个字符出现的次数
@@ -113,10 +115,13 @@ cs = Counter(s)
 print(cs)               # Counter({'i': 4, 's': 4, 'p': 2, 'm': 1})
 cps = Counter(s)
 print(cps, cs == cps)   # Counter({'i': 4, 's': 4, 'p': 2, 'm': 1}) True
-cps["x"] = 0
+cps["x"] = 0    # py3.10 才加入富比较运算符，低版本时下面的比较会返回 False
 print(cps, cs == cps)   # Counter({'i': 4, 's': 4, 'p': 2, 'm': 1, 'x': 0}) True
 cps["A"] += 1   # 不存在的键默认计数为 0
 print(cps, cs == cps)   # Counter({'i': 4, 's': 4, 'p': 2, 'm': 1, 'A': 1, 'x': 0}) False
 ```
 
-此外，defaultdict(int) 之间不支持 in、> 等运算符，要比较范围建议使用 Counter。
+此外，defaultdict(int) 之间不支持 in、> 等运算符，要比较范围建议使用 py3.10+ 的 Counter。
+
+defaultdict(list) 的一个案例：[49. 字母异位词分组](https://leetcode.cn/problems/group-anagrams/solutions/520469/zi-mu-yi-wei-ci-fen-zu-by-leetcode-solut-gyoc/?envType=study-plan-v2&envId=top-interview-150)
+
