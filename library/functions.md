@@ -48,6 +48,14 @@ ValueError: invalid literal for int() with base 10: '   12+345\n'
 5
 ```
 
+向上取整：math.ceil(a/b)、（a+b-1)//b
+
+向下取整：math.floor(a/b)、整除"a//b"
+
+向0取整：int()
+
+四舍五入：round()——奇数向远离0取整，偶数去尾取整；或言之：奇数进位，偶数去尾
+
 # map
 
 `map(function, iterable, *iterables)`: 返回一个将 function 应用于 iterable 的每一项，并产生其结果的迭代器。
